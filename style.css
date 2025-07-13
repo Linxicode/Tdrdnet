@@ -306,15 +306,307 @@
 
     .p1{
         display: flex;
-        background-image: url('/Tdrdnet/photo1.jpg');
+        background-image: url('Tdrdnet/photo1.jpg');
         align-items: center;
     }
-    .p1 .t1{
+    .t1{
         margin-left: 10px;
         font-weight: 600;
         font-size: 48px;
         text-decoration: none;
         color: white;
     }
-    .p2{background-image: url('/Tdrdnet/photo2.png');}
-    .p3{background-image: url('/Tdrdnet/photo1.jpg');}
+    .solidline {
+        border: 0;              /* 清除默认样式 */
+        height: 5px;            /* 线粗 */
+        background: white;        /* 颜色 */
+        margin: 20px 0;          /* 上下间距 */
+    }
+
+    .mainbody{
+        display: flex;
+        background-color: rgba(0, 0, 0, 1); 
+        flex-wrap: wrap;
+        justify-content: center; /* 水平居中所有子元素 */
+        flex-direction: column;
+    }
+
+    .mtitle{
+        color: white;
+        background-color:black;
+        text-align: center;
+        justify-content: center;
+        height: 80px;
+        line-height: 80px;
+        font-size: 40px;
+        font-weight: 700;
+        position: relative; /* 确保内容在背景上层 */
+        width: 100%; 
+    }
+
+    .introtext {
+        color: white;
+        text-align: center;
+        position: relative; /* 确保内容在背景上层 */
+        width: 100%; 
+    }
+
+    .wrapper{
+                width: 100%;
+                height: 320px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .wrapper nav{
+                width: 100px;
+                height: 600px;
+                border-radius: 12px;
+                backdrop-filter: blur(18px);
+                background: rgba(230,235,240,.7);
+                border: 2px solid rgba(230,235,240,.7);
+                box-shadow: 0 0 30px rgba(0,0,0,.05);
+            }
+
+            .incontainer{
+                height: 300px;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: start;
+            }
+
+            .card{
+                width: 80px;
+                border-radius: 75rem;
+                background-size: cover;
+                cursor: pointer;
+                overflow: hidden;
+                border-radius: 2rem;
+                margin: 0 10px;
+                display: flex;
+                align-items: flex-end;
+                transition: .6s cubic-bezier(.28,-0.03,0,.99);
+                box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8);
+            }
+
+            .card>.row{
+                color:white;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            .card>.row>.icon{
+                color: white;
+                border-radius: 50%;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                opacity: .8;
+                align-items: center;
+                margin: 15px;
+            }
+          
+            
+            .card:nth-child(2) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(4) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(6) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(8) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(10) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(12) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(14) .icon{
+                background-color: #646464;
+            }
+            .card:nth-child(16) .icon{
+                background-color: #646464;
+            }
+
+            .card>.row>.description{
+                display: flex;
+                justify-content: left;
+                flex-direction: column;
+                overflow: hidden;
+                height: 80px;
+                width: 300px;
+                opacity: 0;
+                transform: translateY(30px);
+                transition-delay: .3s;
+                transition: all .3s ease;
+            }
+
+            .description p {
+                color: #eaeaef;
+                padding-top: 5px;
+                text-align:left;
+            }
+
+            .description h4 {
+                padding-top: 10px;
+                text-transform: uppercase;
+                text-align:left;
+            }
+
+            input{
+                display: none;
+            }
+
+            input:checked+label {
+                width: 300px;
+            }
+
+            input:checked+label .description{
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+
+            .card[for='c1']{
+                background-image: url(Tdrdnet/Linxi.jpg);
+            }
+            .card[for='c2']{
+                background-image: url(Tdrdnet/XHHANHAN.jpg);
+            }
+            .card[for='c3']{
+                background-image: url(Tdrdnet/Atmo.jpg);
+            }
+            .card[for='c4']{
+                background-image: url(Tdrdnet/SX.jpg);
+            }
+            .card[for='c5']{
+                background-image: url(Tdrdnet/Q9.jpg);
+            }
+            .card[for='c6']{
+                background-image: url(Tdrdnet/Songzhe.jpg);
+            }
+            .card[for='c7']{
+                background-image: url(Tdrdnet/photo1.jpg);
+            }
+            .card[for='c8']{
+                background-image: url(Tdrdnet/photo1.jpg);
+            }
+
+    .p2{
+        display: flex;
+        flex-direction: column;  
+        align-items: center;     /* 水平居中（交叉轴） */
+        justify-content: center; /* 新增：垂直居中（主轴） */
+        height: 100vh;           /* 关键：设置容器高度为视口高度 */
+        background-image: url('Tdrdnet/jihe.jpg');
+    }
+
+    .album-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+        justify-content: center;
+    }
+    .album-item {
+        aspect-ratio: 1/1; /* 保持正方形比例 */
+        overflow: hidden;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .album-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+    .album-grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .album-grid {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}
+
+/* 可选：保留原有的悬停效果 */
+.album-grid:hover .album-item:not(:hover) {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+.album-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.balbum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 确保所有子元素垂直居中 */
+    margin: 0 20px;
+}
+.picturebox {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.balbum .picturebox:hover {
+    transform: scale(1);
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 80%; /* 相对高度 */
+    background: white; /* 颜色与文字匹配 */
+    margin: 0 20px; /* 左右各20px间距 */
+    align-self: center; /* 自身垂直居中 */
+}
+/* 修改：为.textbox添加垂直居中样式 */
+.textbox {
+    flex: 1; /* 占据剩余空间 */
+    padding: 20px 0; /* 添加垂直内边距 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 文字垂直居中 */
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+    .p3{
+        display: flex;
+        background-image: url('Tdrdnet/photo1.jpg');
+        align-items: center;
+    }
+
+.recruitment-img-container {
+    width: 80%;
+    margin: 30px auto;
+    display: block;
+}
+
+.recruitment-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.recruitment-img-container img:hover {
+    transform: scale(1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
