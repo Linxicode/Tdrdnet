@@ -306,7 +306,7 @@
 
     .p1{
         display: flex;
-        background-image: url('./Tdrdnet/photo1.jpg');
+        background-image: url('/Tdrdnet/photo1.jpg');
         align-items: center;
     }
     .t1{
@@ -472,28 +472,28 @@
             }
 
             .card[for='c1']{
-                background-image: url(./Tdrdnet/Linxi.jpg);
+                background-image: url(/Tdrdnet/Linxi.jpg);
             }
             .card[for='c2']{
-                background-image: url(./Tdrdnet/XHHANHAN.jpg);
+                background-image: url(/Tdrdnet/XHHANHAN.jpg);
             }
             .card[for='c3']{
-                background-image: url(./Tdrdnet/Atmo.jpg);
+                background-image: url(/Tdrdnet/Atmo.jpg);
             }
             .card[for='c4']{
-                background-image: url(./Tdrdnet/SX.jpg);
+                background-image: url(/Tdrdnet/SX.jpg);
             }
             .card[for='c5']{
-                background-image: url(./Tdrdnet/Q9.jpg);
+                background-image: url(/Tdrdnet/Q9.jpg);
             }
             .card[for='c6']{
-                background-image: url(./Tdrdnet/Songzhe.jpg);
+                background-image: url(/Tdrdnet/Songzhe.jpg);
             }
             .card[for='c7']{
-                background-image: url(./Tdrdnet/photo1.jpg);
+                background-image: url(/Tdrdnet/photo1.jpg);
             }
             .card[for='c8']{
-                background-image: url(./Tdrdnet/photo1.jpg);
+                background-image: url(/Tdrdnet/photo1.jpg);
             }
 
     .p2{
@@ -502,7 +502,7 @@
         align-items: center;     /* 水平居中（交叉轴） */
         justify-content: center; /* 新增：垂直居中（主轴） */
         height: 100vh;           /* 关键：设置容器高度为视口高度 */
-        background-image: url('./Tdrdnet/jihe.jpg');
+        background-image: url('/Tdrdnet/jihe.jpg');
     }
 
     .album-grid {
@@ -585,7 +585,7 @@
 }
     .p3{
         display: flex;
-        background-image: url('./Tdrdnet/photo1.jpg');
+        background-image: url('/Tdrdnet/photo1.jpg');
         align-items: center;
     }
 
